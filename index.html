@@ -5,13 +5,16 @@
   </head>
   <body>
     <div class="scoreboard">
-      <!-- Modify the scoreboard when important events occur in your game! -->
-      <div class="high">High score: <span>0</span></div>
-      <div class="current">Current score: <span>0</span></div>
-      <div class="collisions">Collisions: <span>0</span></div>
+        <div class="high-score">High score: <span class='high'>0</span></div>
+        <div class="current-score">Current score: <span class='current'>0</span></div>
+        <div class="collisions-count">Collisions: <span class='collisions'>0</span></div>
     </div>
+    <div class="container"></div>
+      <!-- Modify the scoreboard when important events occur in your game! -->
     <script src="d3.js" charset="utf-8"></script>
-    <script src='vid.js'></script>
-    <script src='watchout.js'></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <!-- <script src='vid.js'></script> -->
+    <!-- <script src='watchout.js'></script> -->
+    <script src='asteroid.js'></script>
   </body>
 </html>

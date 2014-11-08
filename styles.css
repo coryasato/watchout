@@ -2,4 +2,20 @@
 
 /* Note: an asteroid image is included in this repo. 
 Feel free to use it if you like. */
+body {
+  font-family: Helvetica;
+}
 
+.scoreboard {
+  display: inline-block;
+  position: fixed;
+
+}
+
+.player {
+  z-index: 10;
+}
+
+.enemy {
+  background-color: pink;
+}

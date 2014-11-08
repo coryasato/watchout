@@ -4,12 +4,13 @@
 Feel free to use it if you like. */
 body {
   font-family: Helvetica;
+  background: url('./images/space.jpg');
 }
 
 .scoreboard {
+  color: #f7f7f7;
   display: inline-block;
   position: fixed;
-
 }
 
 .player {

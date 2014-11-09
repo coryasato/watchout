@@ -14,9 +14,6 @@ body {
 }
 
 .player {
-  z-index: 10;
+  z-index: 999;
 }
 
-.enemy {
-  background-color: pink;
-}

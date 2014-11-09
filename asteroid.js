@@ -16,7 +16,6 @@ var randX = function(){ return rand(gameOptions.width-gameOptions.r*2); };
 var randY = function(){ return rand(gameOptions.height-gameOptions.r*2); };
 
 // Score Tracker
-
 function scoreTracker() {
   gameStats.score += 1;
   gameStats.bestScore = _.max([gameStats.bestScore, gameStats.score]);
@@ -27,7 +26,6 @@ function scoreTracker() {
 setInterval(scoreTracker, 100);
 
 // Main Board
-
 var gameBoard = d3.select('div.container').append('svg:svg').attr({
   width: gameOptions.width,
   height: gameOptions.height
@@ -63,16 +61,18 @@ function onDragDrop(dragHandler, dropHandler) {
 }
 
 function dropHandler(d) {
-  //console.log('dropped');
+  // Do something cool!
 }
 
 function dragmove(d) {
   d.x += d3.event.dx;
   d.y += d3.event.dy;
   d3.select(this)
-    .attr("transform", "translate(" + d.x + ","  + d.y + ")")
-    .attr('cx', d.x)
-    .attr('cy', d.y);
+    .attr({
+      cx: d.x,
+      cy: d.y
+    })
+    .attr("transform", "translate(" + d.x + ","  + d.y + ")");
 }
 
 // Create Enemies
@@ -117,7 +117,6 @@ function move(element) {
 move(enemies);
 
 // Collision handling
-
 var prevCollision = false;
 
 function detectCollisions() {
